@@ -1,0 +1,14 @@
+get_iftar_time:
+  description: >
+    Fetch today's iftar time based on the query {iftar_query}.
+  expected_output: >
+    Iftar time based on query {iftar_query}
+  agent: iftar_time_assistant
+
+
+get_buffet_info:
+  description: >
+    Fetch information about the buffet based on the query {buffet_query}.
+  expected_output: >
+    Buffet information based on query {buffet_query}
+  agent: buffet_assistant
