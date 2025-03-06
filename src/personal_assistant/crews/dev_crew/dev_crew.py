@@ -17,11 +17,13 @@ google_embedder = {
         "api_key": GEMINI_API_KEY,
     }
 }
-content = "User name is Imran. He is 44 years old and lives in Faisalabad."
-string_source = StringKnowledgeSource(
-    content=content,
+# content = "User name is Imran. He is 44 years old and lives in Faisalabad."
+# string_source = StringKnowledgeSource(
+#     content=content,
+# )
+excel_source = ExcelKnowledgeSource(
+    file_paths=["knowledge.xlsx"]
 )
-
 
 @CrewBase
 class DevCrew:
@@ -102,7 +104,7 @@ class DevCrew:
             tasks = self.tasks,  # Automatically created by the @task decorator
             process = Process.sequential,
             verbose = True,
-            knowledge_sources = [string_source],
+            knowledge_sources = [excel_source], #[string_source],
             embedder={
                 "provider": "google",
                 "config": {
