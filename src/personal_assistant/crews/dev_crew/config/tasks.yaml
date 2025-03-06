@@ -12,3 +12,10 @@ get_buffet_info:
   expected_output: >
     Buffet information based on query {buffet_query}
   agent: buffet_assistant
+
+get_knowledge:
+  description: >
+    Answer the following questions about the user: {knowledge_query}
+  expected_output: >
+    An answer to the question.
+  agent: knowledge_assistant

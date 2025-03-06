@@ -11,6 +11,7 @@ class DevFlow(Flow):
             inputs= {
                 "iftar_query":"what is iftar time in faisalabad",
                 "buffet_query":"Give top 5 buffets with prices in faisalabad",
+                "knowledge_query": "What city does Imran live in and how old is he?"
             }
         )
         return output.raw
